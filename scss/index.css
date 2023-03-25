@@ -1,0 +1,540 @@
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+header {
+  background-image: url("../assets/images/Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.header {
+  max-width: 1760px;
+  width: 100%;
+  padding: 64px 85px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.header #menu__toggle {
+  display: none;
+}
+.header #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+.header #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.header #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.header #menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+.header .menu__btn {
+  display: none;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.header .menu__btn > span,
+.header .menu__btn > span::before,
+.header .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: 0.25s;
+}
+.header .menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.header .menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.header .menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 106px 0 0 81px;
+  list-style: none;
+  background-color: rgba(236, 239, 241, 0.1568627451);
+  transition-duration: 0.25s;
+}
+.header .menu__box .header__search-field {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  width: 70px;
+}
+.header .menu__box .header__search-field::-moz-placeholder {
+  color: white;
+}
+.header .menu__box .header__search-field::placeholder {
+  color: white;
+}
+.header .menu__item {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  display: block;
+  padding: 12px 0;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.header .menu__item:hover {
+  background-color: #CFD8DC;
+}
+.header__logo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+.header__nav {
+  margin-top: -8px;
+}
+.header__nav_list {
+  display: flex;
+  list-style-type: none;
+}
+.header__nav_list-item {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  margin-right: 50px;
+}
+.header__nav_list-item a:active,
+.header__nav_list-item a:hover,
+.header__nav_list-item a {
+  text-decoration: none;
+  color: white;
+}
+.header__search {
+  height: 30px;
+  margin-top: 12px;
+}
+.header__search-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.header__search-field {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: grey;
+  width: 60px;
+}
+.header__wrapper {
+  margin: 0 85px;
+}
+
+.main {
+  padding: 200px 85px 0;
+  color: white;
+}
+.main__start {
+  max-width: 1760px;
+  width: 100%;
+  margin: 200px auto;
+  padding: 0 85px;
+  display: flex;
+}
+.main__start .container {
+  margin: 0 80vw 0 20vw;
+}
+.main__start-icon {
+  width: 24px;
+  height: 24px;
+  margin: 5px 0;
+}
+.main__start-side {
+  width: 25px;
+  margin-top: 60px;
+}
+.main__start-vertical {
+  writing-mode: vertical-lr;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+}
+.main__start-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  color: #FFC178;
+  text-transform: uppercase;
+}
+.main__start-line {
+  width: 72px;
+  border: 1px solid #FFC178;
+  display: inline-block;
+  margin: 0 32px 5px 0;
+}
+.main__start-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 96px;
+  color: white;
+}
+.main__start-title span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 88px;
+  color: white;
+  display: block;
+  margin-top: -20px;
+  width: 555px;
+}
+.main__start-scroll {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  background: transparent;
+  border: none;
+  float: right;
+}
+.main__start-scroll svg {
+  margin-bottom: -5px;
+  margin: 125px 30px 0 9px;
+}
+.main__container {
+  max-width: 1462px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main__rajgad {
+  margin: 760px auto 0;
+  display: flex;
+  max-width: 1461px;
+  width: 100%;
+  justify-content: space-between;
+}
+.main__rajgad-rightside {
+  max-width: 632px;
+  width: 100%;
+  margin-top: 88px;
+  margin-left: 20px;
+}
+.main__rajgad-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  color: #FFC178;
+  text-transform: uppercase;
+}
+.main__rajgad-line {
+  width: 72px;
+  border: 1px solid #FFC178;
+  display: inline-block;
+  margin: 0 32px 5px 0;
+}
+.main__rajgad-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: white;
+  margin-top: 27px;
+}
+.main__rajgad-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  margin: 27px 0;
+}
+.main__rajgad-button {
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  color: #FBD784;
+}
+.main__rajgad-button .right-arrow-icon {
+  height: 16px;
+  width: 24px;
+}
+.main__shreemant {
+  margin-top: 250px;
+  height: 985px;
+  max-width: 1761px;
+  width: 100%;
+  background-image: url("../assets/images/image 2.jpg");
+  background-position: top;
+  text-align: center;
+}
+.main__shreemant-container {
+  padding-top: 572px;
+}
+.main__shreemant-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: white;
+}
+.main__shreemant-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  max-width: 934px;
+  width: 100%;
+  margin: 27px auto 39px;
+}
+.main__shreemant-button {
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  color: #FBD784;
+}
+.main__shreemant-button .right-arrow-icon {
+  height: 16px;
+  width: 24px;
+}
+.main__culture {
+  display: flex;
+  max-width: 1461px;
+  width: 100%;
+  margin-top: 227px;
+  justify-content: space-between;
+}
+.main__culture-line {
+  width: 72px;
+  border: 1px solid #FFC178;
+  display: inline-block;
+  margin: 0 32px 5px 0;
+}
+.main__culture-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  color: #FFC178;
+  text-transform: uppercase;
+}
+.main__culture-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: white;
+  margin-top: 27px;
+  max-width: 555px;
+}
+.main__culture-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  margin: 27px 15px 0 0;
+  max-width: 632px;
+}
+.main__culture-button {
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  color: #FBD784;
+  margin-top: 27px;
+}
+.main__culture-button .right-arrow-icon {
+  height: 16px;
+  width: 24px;
+}
+
+.footer {
+  padding: 0 85px;
+}
+.footer__container {
+  margin: 250px auto;
+  max-width: 1461px;
+}
+.footer__topbar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 55px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2666666667);
+}
+.footer__topbar-logo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: white;
+}
+.footer__topbar-rightside {
+  display: flex;
+  justify-content: space-between;
+  width: 580px;
+}
+.footer__topbar-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  margin-top: 13px;
+}
+.footer__topbar-button {
+  background-color: #FFA343;
+  border-radius: 5px;
+  width: 241px;
+  height: 69px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__rajgad {
+    display: block;
+  }
+  .main__rajgad img {
+    margin: 0 auto;
+  }
+  .main__rajgad-rightside {
+    margin: 50px auto;
+  }
+  .main__culture {
+    flex-direction: column-reverse;
+  }
+  .main__culture-rightside {
+    margin-top: 50px;
+  }
+  .footer__topbar-logo {
+    margin-right: 100px;
+  }
+  .main__start .container {
+    margin: 0 80vw 0 13vw;
+  }
+}
+@media screen and (max-width: 860px) {
+  .main {
+    padding: 0 30px 0 30px;
+  }
+  .main__culture {
+    margin-top: 450px;
+  }
+  .main__shreemant-paragraph {
+    margin-top: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .main__start {
+    padding: 0;
+    transform: scale(0.6);
+  }
+  .main__start-side {
+    display: none;
+  }
+  .main__start .container {
+    margin: 0 80vw 0 0;
+  }
+  .header .menu__btn {
+    display: flex;
+    top: 25px;
+    left: 25px;
+  }
+  .header__logo, .header__nav, .header__search {
+    display: none;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__topbar {
+    display: block;
+  }
+  .footer__topbar-rightside {
+    display: block;
+    margin: 0 auto;
+    width: 228px;
+  }
+  .footer__topbar-button {
+    display: block;
+    margin: 0 auto;
+  }
+  .footer__topbar-logo {
+    width: 136px;
+    margin: 0 auto;
+  }
+  .footer__topbar-title {
+    width: 183px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__wrapper {
+    margin: 0 20px;
+  }
+  .main {
+    padding: 0px 15px 0;
+  }
+  .main__start {
+    transform: scale(0.5);
+    padding: 0;
+  }
+  .main__start .container {
+    margin-left: -90px;
+  }
+  .main__rajgad {
+    margin-top: 200px;
+  }
+  .main__culture {
+    margin-top: 445px;
+  }
+  .main__culture-title {
+    font-size: 50px;
+  }
+  .main__shreemant-title {
+    margin-left: -40px;
+  }
+  .main__shreemant-container {
+    transform: scale(0.7);
+  }
+  .main__culture-rightside {
+    transform: scale(0.7);
+  }
+}/*# sourceMappingURL=index.css.map */
